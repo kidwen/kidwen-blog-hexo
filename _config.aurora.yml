@@ -1,0 +1,296 @@
+#! ---------------------------------------------------------------
+#! Aurora Theme for Hexo
+#! ---------------------------------------------------------------
+#! Designed & Coded By TriDiamond
+#! ---------------------------------------------------------------
+
+#! ---------------------------------------------------------------
+#! Site Configs
+#！ @docs https://aurora.tridiamond.tech/guide/configuration.html
+#! ---------------------------------------------------------------
+site:
+  subtitle: Kidwen's Blog
+  author: Kidwen
+  nick: Auroral UI
+  description: 'Frontend'
+  link: '/'
+  language: en
+  multi_language: true
+  logo: https://avatars.githubusercontent.com/u/38277891?s=40&v=4
+  avatar: https://avatars.githubusercontent.com/u/38277891?v=4
+  beian:
+    number: ''
+    link: ''
+  police_beian:
+    number: ''
+    link: ''
+
+#! ---------------------------------------------------------------
+#! Authors Configs
+#！ @docs https://aurora.tridiamond.tech/guide/authors.html
+#! ---------------------------------------------------------------
+authors:
+  ##! example
+  # Kidwen:
+  #   name: Kidwen
+  #   avatar: https://up.enterdesk.com/edpic_source/44/ff/3d/44ff3d6bd2819d524facfcc33205d4cd.jpg
+  #   link: https://github.com/TriDiamond
+  #   description: 'Think like an artist, code like an artisan.'
+  #   socials:
+  #     github: https://tridiamond.tech
+
+#! ---------------------------------------------------------------
+#! Menu Configs
+#！ @docs https://aurora.tridiamond.tech/guide/menu.html
+#! ---------------------------------------------------------------
+menu:
+  About: true
+  Tags: true
+  Archives: true
+
+#! ---------------------------------------------------------------
+#! Theme Config
+#! @docs https://aurora.tridiamond.tech/guide/theme.html
+#! ---------------------------------------------------------------
+theme:
+  dark_mode: false
+  profile_shape: diamond # support `circle`, `diamond`, `rounded`
+  feature: false
+  gradient:
+    color_1: '#24c6dc'
+    color_2: '#5433ff'
+    color_3: '#ff0099'
+
+#! ---------------------------------------------------------------
+#! Social Configs
+#! @docs https://aurora.tridiamond.tech/guide/social.html
+#! ---------------------------------------------------------------
+socials:
+  github: https://github.com/kidwen
+  # customs:
+  ##! Example:
+  ##! --- Using SVG
+  # bilibili:
+  #   icon: http://localhost:4000/svg/bilibili.svg
+  #   link: https://live.bilibili.com/22619211
+
+  ##! --- Using IconFont
+  # baidu:
+  #   icon: iconfont icon-baidu
+  #   link: https://live.bilibili.com/22619211
+
+  ##! --- Using FontAwesome
+  # book:
+  #   icon: far fa-address-book
+  #   link: https://live.bilibili.com/22619211
+
+#! ---------------------------------------------------------------
+#! Site Meta Configs
+#! @docs https://aurora.tridiamond.tech/guide/theme.html
+#! ---------------------------------------------------------------
+site_meta:
+  cdn: cn
+  favicon:
+  description: ''
+  keywords: 'Frontend, Web development'
+  author: 'kdiwen'
+
+#! ---------------------------------------------------------------
+#! Plugins
+#! @docs https://aurora.tridiamond.tech/guide/plugins.html
+#! ---------------------------------------------------------------
+
+# For local development only!
+gitalk:
+  enable: true
+  autoExpand: false
+  clientID: '64d9255b573120602cb8'
+  clientSecret: 'f9f5bbcc22aa1646e36b4383313c8d4893f40e09'
+  repo: 'kidwen.github.io'
+  owner: 'kidwen'
+  admin: ['kidwen']
+  id: uid
+  language: en
+  distractionFreeMode: false
+  recentComment: false
+  proxy: ''
+
+# Valine comment plugin (recommended!)
+# see https://valine.js.org/quickstart.html
+valine:
+  enable: false
+  # app_id:
+  # app_key:
+  # avatar: ''
+  # placeholder: Leave your thoughts behind~
+  # visitor: true
+  # lang: en
+  # avatarForce: false
+  # meta: ['nick', 'mail']
+  # requiredFields: []
+  # admin: 'TriDiamond'
+  # recentComment: true
+
+# Enable Busuanzi statistic plugin
+# see http://ibruce.info/2015/04/04/busuanzi/
+busuanzi:
+  enable: false
+
+copy_protection:
+  enable: false
+  author:
+    cn: kidwen
+    en: kidwen
+  link:
+    cn: 本文来自于
+    en: Article is from
+  license:
+    cn: 博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
+    en: This content is shared under the CC BY-NC-SA 4.0 protocol (Non-Commercial)
+
+#! ---------------------------------------------------------------
+#! Enable Aurora Bot Dia
+#! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
+#! ---------------------------------------------------------------
+aurora_bot:
+  enable: true
+  locale: en
+  bot_type: dia
+  tips:
+    visibility_change: Welcome back my friend!~
+    console: LOL, you opened the console, want to find out my little secrets?
+    copy: What have you copied? Remember to add the source when using it!
+    welcome:
+      '24': Are you a night owl? Will you able get up tomorrow?
+      '5_7':
+        Good morning! The plan for a day lies in the morning, and a beautiful day
+        is about to begin.
+      '7_11': Good morning! How is your day doing? don't sit for too long!
+      '11_13': It's noon, Must have being working all morning, and it's lunch time!
+      '13_17': It's easy to get sleepy in the afternoon. Have a cup of coffee maybe?
+      '17_19': It's evening! The sunset outside the window is beautiful.
+      '19_21': Good evening, how are you doing today?
+      '21_23':
+        - It's getting late, rest early, good night~
+        - Take good care of your eyes!
+    referrer:
+      # User came from your own site.
+      self: Welcome to <span>「[PLACEHOLDER]」</span>
+      # User came from Baidu search engine.
+      baidu:
+        Hello！Friend from Baidu search engine,<br>did you search <span>「[PLACEHOLDER]」</span>
+        to find me？
+      # User came from 360 search engine.
+      so:
+        Hello！Friend from 360 search engine,<br>did you search <span>「[PLACEHOLDER]」</span>
+        to find me？
+      # User came from Google search engine.
+      google: Hello！Friend from Google search engine,<br>enjoy your time reading <span>「[PLACEHOLDER]」</span>
+      # User came from another website.
+      site: Hello there, friend from <span>[PLACEHOLDER]</span>
+      # For any other source.
+      other: Thanks for reading <span>「[PLACEHOLDER]」</span>
+    mouseover:
+      # Hover on Dia
+      - selector: '#Aurora-Dia'
+        text:
+          - Waaaaaaaa...What are you <span>doing</span>? O.O
+          - Please be gentle, I am very delicate! O.O
+          - '<span>Sir yes sir!</span> What can I help you with? O.O'
+      # Hover on home menu
+      - selector: "[data-menu='Home']"
+        text:
+          - 'Click to go to the <span>home page</span>. '
+          - Yes, click here to go <span>back home</span>.
+          - Go take a look at the <span>home page</span>.
+      # Hover on about menu
+      - selector: "[data-menu='About']"
+        text:
+          - You want to know more about my <span>master</span>?
+          - Here hides all the <span>secrets of my master</span>, want to take a look?
+          - Found my master's <span>secret hideout</span>!
+      # Hover on archives menu
+      - selector: "[data-menu='Archives']"
+        text:
+          - Here stores all the <span>works</span> my master had done！
+          - Wanna see my master's <span>library?</span>
+          - Yes, my masters' <span>ancient histories</span> are all here!
+      # Hover on tags menu
+      - selector: "[data-menu='Tags']"
+        text:
+          - Click here to look at <span>article tags</span>.
+          - Tags are used to better <span>categorize</span> your articles.
+      # Hover on language menu
+      - selector: "[data-dia='language']"
+        text: Master's blog supports multiple <span>languages.</span>
+      # Hover on light and dark switch
+      - selector: "[data-dia='light-switch']"
+        text:
+          You can switch between <span>light</span> and <span>dark</span> mode, click
+          the switch to see the magic!
+      # Hover on author profile
+      - selector: "[data-dia='author']"
+        text:
+          - Here is a short profile of my master.
+          - Click any of these links can teleport to my master's other worlds.
+      # Hover on jump to comment menu in article page.
+      - selector: "[data-dia='jump-to-comment']"
+        text:
+          - Do you want to check out the comments?
+          - Click here will help you jump right into the comments section.
+    click:
+      # Click on search button.
+      - selector: "[data-dia='search']"
+        text:
+          - Didn't find what you are looking for? Try search it here!
+          - You can also use <span>ctrl/cmd + k</span> keyboard shortcut to open the search
+            menu.
+      # Click on article header link.
+      - selector: "[data-dia='article-link']"
+        text:
+          - Enjoy reading:<span>「{text}」</span>.
+          - That's a good pick, enjoy time reading this article.
+          - Hope you can learn something from:<span>「{text}」</span>.
+      # Click on Gitalk comment
+      - selector: '.gt-header-textarea'
+        text:
+          - Wanna write something?
+          - Be sure write your comment carefully meow~
+          - Anything you want to say to the author?
+          - If you think the article is good, leave a message for the author.
+      # Click on Valine comment
+      - selector: '.veditor'
+        text:
+          - Wanna write something?
+          - Be sure write your comment carefully meow~
+          - Anything you want to say to the author?
+          - If you think the article is good, leave a message for the author.
+    events:
+      - date: 01/01
+        text: '<span>Happy new year</span>，{year}～'
+      - date: 02/14
+        text: It's <span>Valentine's Day</span>，have you found your loved one in {year}?
+      - date: 03/08
+        text: Today is <span>International Women's Day</span>！
+      - date: 04/01
+        text:
+          Tell you a secret, don't trust anyone today, because today is <span>April
+          Fool</span>
+      - date: 05/01
+        text: Today is <span>International Labour Day</span>，have you planned to go travel?
+      - date: 12/20-12/30
+        text:
+          These few days is <span>Christmas</span>，my master must being shopping like
+          crazy!
+      - date: 12/31
+        text:
+          Today is <span>New Year's Eve</span>, this year is going away, but next year
+          is going to be better!
+
+#! ---------------------------------------------------------------
+#! Injections
+#! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
+#! ---------------------------------------------------------------
+injects:
+  scripts:
+  css:

@@ -1,6 +1,6 @@
 ---
 title: http-server
-tag: doc
+tag: server
 categories:
   - FRONTEND
 ---

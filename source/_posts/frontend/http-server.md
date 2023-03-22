@@ -9,7 +9,7 @@ http-server is a simple, zero-configuration command-line static HTTP server. It 
 ## Install
 
 ```bash
-npm i -D http-server
+npm i -g http-server
 ```
 
 ## Use

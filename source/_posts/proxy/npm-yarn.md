@@ -1,7 +1,7 @@
 ---
 title: npm/yarn proxy/registry
 date: 2023-03-20 16:12:22
-cover: images/yarn.png
+cover: /images/yarn.png
 tags: 
   - npm
   - yarn

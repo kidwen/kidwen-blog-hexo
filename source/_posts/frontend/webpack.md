@@ -1,7 +1,7 @@
 ---
 title: webpack
 date: 2023-03-20 12:13:22
-cover: images/webpack.svg
+cover: /images/webpack.svg
 tags: 
   - build
 categories:

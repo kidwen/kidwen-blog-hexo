@@ -1,6 +1,7 @@
 ---
 title: http-server
 tag: server
+cover: images/http-server.png
 categories:
   - FRONTEND
 ---

@@ -1,5 +1,6 @@
 ---
 title: Develope with hexo
+cover: /images/blog.png
 categories:
   - ARTICLE
 tag: doc

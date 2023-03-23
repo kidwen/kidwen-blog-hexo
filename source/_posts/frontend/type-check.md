@@ -26,7 +26,7 @@ Object.prototype.toString.call(empty); // '[object Null]'
 
 ## Check Array
 ```javascript
-const arr = []
+const arr = [];
 
 arr instanceof Array; // true
 // or

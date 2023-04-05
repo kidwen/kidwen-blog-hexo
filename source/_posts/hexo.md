@@ -1,5 +1,5 @@
 ---
-title: Develope with hexo
+title: develope with hexo
 cover: /images/blog.jpg
 categories:
   - ARTICLE

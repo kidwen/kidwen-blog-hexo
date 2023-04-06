@@ -1,6 +1,7 @@
 ---
 title: develope with hexo
 cover: /images/blog.jpg
+date: 2023-03-15 16:10:22
 categories:
   - ARTICLE
 tag: doc
@@ -8,6 +9,7 @@ tag: doc
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start
+
 ```bash
 # install hexo global
 npm i -g hexo-cli
@@ -17,6 +19,7 @@ npm i
 # or
 yarn
 ```
+
 :::danger remove the comments list
 goto `node-modules/hexo-theme-aurora/source/static/js/app.6d2c358d.js` and delete `ye.render = ie;`
 :::
@@ -44,9 +47,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ### Deploy to remote sites
 
 ``` bash
-$ yarn deploy
+yarn deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
-
-

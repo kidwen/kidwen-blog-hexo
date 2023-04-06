@@ -10,16 +10,19 @@ categories:
 PowerShell is a task automation and configuration management program from Microsoft, consisting of a command-line shell and the associated scripting language.
 
 ## Show
-```sh
+
+```bash
 netsh winhttp show proxy
 ```
 
 ## Set
-```sh
+
+```bash
 netsh winhttp set proxy 127.0.0.1:10808
 ```
 
 ## Cancle
-```sh
+
+```bash
 netsh winhttp reset proxy
 ```

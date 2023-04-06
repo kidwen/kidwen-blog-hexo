@@ -92,8 +92,6 @@ module.exports = {
 
 ## 规则介绍
 
-### 
-
 ## 完整示例
 
 {% include_code lang:javascript .eslintrc.js %}

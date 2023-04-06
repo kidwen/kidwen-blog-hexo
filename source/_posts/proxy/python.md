@@ -7,11 +7,7 @@ tags:
 categories:
   - PROXY
 ---
-Python is powerful... and fast;
-plays well with others;
-runs everywhere;
-is friendly & easy to learn;
-is Open.
+Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
 
 ## `pip` 单次设置代理
 

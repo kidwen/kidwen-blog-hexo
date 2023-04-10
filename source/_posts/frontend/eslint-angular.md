@@ -2,7 +2,7 @@
 title: eslint-angular
 tag: eslint
 date: 2023-04-01 08:00:00
-cover: /images/eslint-angular.png
+cover: /images/eslint-angular.jpeg
 categories:
   - FRONTEND
 ---

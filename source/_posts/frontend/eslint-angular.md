@@ -92,6 +92,103 @@ module.exports = {
 
 ## 规则介绍
 
+### @typescript-eslint
+
+###### array-type
+
+- [官方地址](https://typescript-eslint.io/rules/array-type)
+- 类型
+    - 'error'|Array
+- 选项
+    ```TypeScript
+    {
+        default?: "array" | "generic" | "array-simple";
+        readonly?: "array" | "generic" | "array-simple";
+    }
+    ```
+- 描述
+    - 配置数组声明方式,`error`代表使用`T[]`
+- 示例
+    ```json
+    {
+        "@typescript-eslint/array-type": [
+            "error",
+            {
+                "default": "generic"
+            }
+        ],
+    }
+    ```
+###### ban-ts-comment
+
+- [官方地址](https://typescript-eslint.io/rules/ban-ts-comment)
+- 选项
+    ```typescript
+    type DirectiveConfigSchema =
+        | boolean
+        | "allow-with-description"
+        | {
+            descriptionFormat?: string;
+            };
+
+    interface Options {
+        "ts-expect-error"?: DirectiveConfigSchema;
+        "ts-ignore"?: DirectiveConfigSchema;
+        "ts-nocheck"?: DirectiveConfigSchema;
+        "ts-check"?: DirectiveConfigSchema;
+        minimumDescriptionLength?: number;
+    }
+
+    const defaultOptions: Options = [
+        {
+            "ts-expect-error": "allow-with-description",
+            "ts-ignore": true,
+            "ts-nocheck": true,
+            "ts-check": false,
+            minimumDescriptionLength: 3,
+        },
+    ];
+    ```
+- 描述
+    - 禁止`@ts-<directive>`注释或要求指令后的描述
+    - 默认只允许`@ts-check`
+    - `allow-with-description`允许带描述的注释指令
+    ```typescript
+    // @ts-expect-error: description
+    ```
+    - `descriptionFormat`正则匹配指令注释后的描述,不匹配则报错
+    - `minimumDescriptionLength`指令注释后的描述最短长度
+- 示例
+    ```json
+    {
+        "@typescript-eslint/ban-ts-comment": [
+            "error",
+            { 
+                "ts-expect-error": "allow-with-description",
+                "ts-ignore": true,
+                "ts-nocheck": true,
+                "ts-check": false,
+                "minimumDescriptionLength": 3
+            }
+        ],
+    }
+    ```
+###### ban-types
+
+- [官方地址](https://typescript-eslint.io/rules/ban-types)
+- 选项
+- 描述
+- 示例
+
+###### consistent-type-definitions
+
+- [官方地址](https://typescript-eslint.io/rules/consistent-type-definitions)
+- 选项
+- 描述
+- 示例
+
 ## 完整示例
 
+:::details Check what you want to copy to your config file
 {% include_code lang:javascript .eslintrc.js %}
+:::

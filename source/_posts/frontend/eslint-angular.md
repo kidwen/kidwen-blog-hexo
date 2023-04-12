@@ -94,21 +94,24 @@ module.exports = {
 
 ### @typescript-eslint
 
-###### array-type
+#### array-type
 
 - [官方地址](https://typescript-eslint.io/rules/array-type)
 - 类型
     - 'error'|Array
 - 选项
+
     ```TypeScript
     {
         default?: "array" | "generic" | "array-simple";
         readonly?: "array" | "generic" | "array-simple";
     }
     ```
+
 - 描述
     - 配置数组声明方式,`error`代表使用`T[]`
 - 示例
+
     ```json
     {
         "@typescript-eslint/array-type": [
@@ -119,10 +122,12 @@ module.exports = {
         ],
     }
     ```
-###### ban-ts-comment
+
+#### ban-ts-comment
 
 - [官方地址](https://typescript-eslint.io/rules/ban-ts-comment)
 - 选项
+
     ```typescript
     type DirectiveConfigSchema =
         | boolean
@@ -149,16 +154,20 @@ module.exports = {
         },
     ];
     ```
+
 - 描述
     - 禁止`@ts-<directive>`注释或要求指令后的描述
     - 默认只允许`@ts-check`
     - `allow-with-description`允许带描述的注释指令
+
     ```typescript
     // @ts-expect-error: description
     ```
+
     - `descriptionFormat`正则匹配指令注释后的描述,不匹配则报错
     - `minimumDescriptionLength`指令注释后的描述最短长度
 - 示例
+
     ```json
     {
         "@typescript-eslint/ban-ts-comment": [
@@ -173,14 +182,15 @@ module.exports = {
         ],
     }
     ```
-###### ban-types
+
+#### ban-types
 
 - [官方地址](https://typescript-eslint.io/rules/ban-types)
 - 选项
 - 描述
 - 示例
 
-###### consistent-type-definitions
+#### consistent-type-definitions
 
 - [官方地址](https://typescript-eslint.io/rules/consistent-type-definitions)
 - 选项

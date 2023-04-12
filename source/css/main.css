@@ -1,3 +1,11 @@
 .ob-drop-shadow[data-dia="light-switch"] {
   display: none !important;
 }
+
+.post-html h4, .post-html h5, .post-html h6 {
+  padding-top: 0;
+}
+.post-html h4::after, .post-html h5::after, .post-html h6::after {
+  display: none;
+}
+

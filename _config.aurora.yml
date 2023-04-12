@@ -294,3 +294,4 @@ aurora_bot:
 injects:
   scripts:
   css:
+    - <link rel="stylesheet" href="/css/main.css">

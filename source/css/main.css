@@ -9,3 +9,14 @@
   display: none;
 }
 
+.post-html ol>li:before {
+  position: absolute;
+}
+
+.sidebar-box:not(:last-child) {
+  display: none;
+}
+
+#sticky-sidebar .sidebar-box {
+  display: block;
+}

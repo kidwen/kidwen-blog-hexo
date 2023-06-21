@@ -20,3 +20,13 @@
 #sticky-sidebar .sidebar-box {
   display: block;
 }
+
+.search-logo {
+  visibility: hidden;
+}
+.ob-dropdown.relative.z-50 {
+  display: none;
+}
+header.site-header .self-stretch div.cursor-pointer span:last-child {
+  display: none;
+}

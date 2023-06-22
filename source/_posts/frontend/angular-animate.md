@@ -90,7 +90,7 @@ transition('open => closed', [
 ]),
 ```
 
-### `trigger`
+### `trigger()`
 > Kicks off the animation and serves as a container for all other animation function calls. HTML template binds to triggerName. Use the first argument to declare a unique trigger name. Uses array syntax.
 ```typescript 
 @Component({

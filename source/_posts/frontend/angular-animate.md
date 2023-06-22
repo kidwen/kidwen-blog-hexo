@@ -28,5 +28,93 @@ Angular Animations is a built-in animation library in Angular framework that all
 
 ---
 
-{% iframe https://codesandbox.io/p/sandbox/angular-animate-tphl4l 0 0 %}
-{% iframe https://tphl4l-4200.csb.app/ %}
+## Preparation
+
+> Add relation module in `NgModule`
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+    ],
+    declarations: [ ],
+    bootstrap: [ ],
+})
+export class AppModule { }
+```
+
+> Use the method or property from `@angular/animations`
+```typescript
+import {
+    trigger,
+    state,
+    style,
+    animate,
+    transition,
+    // ...
+} from '@angular/animations';
+```
+
+## Introduction
+
+### `state()`
+> define the custom state of animation, then you can conver one state to another state to use some animations, the defualt state such as `void`(the dom not render) and `*`(the dom rendered)
+```typescript
+state('disable', style({
+    backgroundColor: 'rgba(0, 0, 0, .12)',
+    color: 'rgba(0, 0, 0, .38)'
+}))
+```
+
+### `style()`
+> define the style of `state`, must be cameCase for style attributes that contain dashes, such as backgroundColor or wrap them in quotes, such as 'background-color'
+
+### `animate()`
+> Use the animate() function to define the length, delay, and easing of a transition, and to designate the style function for defining styles while transitions are taking place. Use the animate() function to define the keyframes() function for multi-step animations. These definitions are placed in the second argument of the animate() function.
+```typescript
+animate ('duration delay easing')
+```
+- `duration` such as `100`, `'100ms'`, `'0.1s'`
+- `delay` wait for the value time then run the animation
+- `easing` suche as `ease-in`, `ease-out`, `ease-in-out`
+
+### `transition()`
+> The `transition()` function accepts two arguments: The first argument accepts an expression that defines the direction between two transition states, and the second argument accepts one or a series of `animate()` steps
+```typescript
+transition('open => closed', [
+  animate('1s')
+]),
+```
+
+### `trigger`
+> Kicks off the animation and serves as a container for all other animation function calls. HTML template binds to triggerName. Use the first argument to declare a unique trigger name. Uses array syntax.
+```typescript 
+@Component({
+    selector: 'app-open-close',
+    animations: [
+        trigger('openClose', [
+            state('open', style({
+                height: '200px',
+                opacity: 1,
+                backgroundColor: 'yellow'
+            })),
+            state('closed', style({
+                height: '100px',
+                opacity: 0.8,
+                backgroundColor: 'blue'
+            })),
+            transition('open => closed', [
+                animate('1s')
+            ]),
+            transition('closed => open', [
+                animate('0.5s')
+            ]),
+        ])
+    ]
+```
+
+## Example

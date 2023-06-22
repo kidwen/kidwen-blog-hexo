@@ -2,6 +2,7 @@
 title: javascript type check
 tag: type check
 cover: /images/type-check.png
+date: 2023-03-23 16:00:00
 categories:
   - FRONTEND
 ---

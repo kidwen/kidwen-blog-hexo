@@ -1,5 +1,5 @@
 ---
-title: 主题
+title: 响应式主题
 tag: theming
 date: 2023-06-15 13:30:00
 cover: /images/theming.jpeg

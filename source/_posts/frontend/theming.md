@@ -201,3 +201,52 @@ html {
 ```
 
 {% iframe https://codepen.io/kidwen-the-solid/embed/ExONeYg?default-tab=html%2Cresult %}
+
+使用[accent-color]属性设置checkboxs， radio 按钮和其他的表单元素的样式。
+
+```css
+html {
+  accent-color: red;
+}
+```
+
+深色主题通常具有柔和的品牌颜色。更新深色模式的`accent-color`。
+
+```css
+html {
+  accent-color: red;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    accent-color: pink;
+  }
+}
+```
+
+为此使用自定义属性是有意义的，这样您就可以将所有颜色声明保存在一个位置。
+
+```css
+html {
+  color-scheme: light;
+  --page-color: white;
+  --ink-color: black;
+  --highlight-color: red;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    --page-color: black;
+    --ink-color: white;
+    --highlight-color: pink;
+  }
+}
+html {
+  accent-color: var(--highlight-color);
+}
+body {
+  background-color: var(--page-color);
+  color: var(--ink-color);
+}
+```
+
+> 有关使用主题颜色对元素进行着色的更多信息，请参阅有关[更多着色](https://web.dev/accent-color/#extra-more-tinting)的部分。

@@ -30,3 +30,6 @@
 header.site-header .self-stretch div.cursor-pointer span:last-child {
   display: none;
 }
+.language-css .token.punctuation, .language-html .token.punctuation, .language-markup .token.punctuation, .token.punctuation {
+  --subs: #fff;
+}

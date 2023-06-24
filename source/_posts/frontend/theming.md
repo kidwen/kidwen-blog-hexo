@@ -202,7 +202,7 @@ html {
 
 {% iframe https://codepen.io/kidwen-the-solid/embed/ExONeYg?default-tab=html%2Cresult %}
 
-使用[accent-color]属性设置checkboxs， radio 按钮和其他的表单元素的样式。
+使用[accent-color](https://web.dev/accent-color/)属性设置checkboxs， radio 按钮和其他的表单元素的样式。
 
 ```css
 html {

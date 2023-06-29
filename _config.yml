@@ -105,5 +105,5 @@ theme: aurora
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/kidwen/kidwen.github.io.git
+  repo: git@github.com:kidwen/kidwen.github.io.git
   branch: master

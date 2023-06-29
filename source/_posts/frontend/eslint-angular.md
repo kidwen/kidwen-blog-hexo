@@ -1,6 +1,10 @@
 ---
 title: eslint-angular
-tag: eslint
+tags: 
+  - eslint
+  - angular
+  - typescript
+  - javascript
 date: 2023-04-01 08:00:00
 cover: /images/eslint-angular.jpeg
 categories:

@@ -13,7 +13,11 @@
   position: absolute;
 }
 
-.sidebar-box:not(:last-child) {
+.block .sidebar-box:not(:last-child) {
+  display: none;
+}
+
+.relative > :not(.block)  .sidebar-box:last-child {
   display: none;
 }
 

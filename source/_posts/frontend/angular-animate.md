@@ -1,6 +1,8 @@
 ---
 title: animate-angular
-tag: animate
+tags: 
+    - angular
+    - animate
 date: 2023-06-15 10:00:00
 cover: /images/animate-angular.gif
 categories:

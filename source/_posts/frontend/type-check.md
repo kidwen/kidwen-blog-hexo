@@ -1,6 +1,6 @@
 ---
 title: javascript type check
-tag: type check
+tag: javascript
 date: 2023-03-23 16:00:00
 cover: /images/type-check.png
 categories:

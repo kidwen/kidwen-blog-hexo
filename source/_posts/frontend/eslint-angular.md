@@ -415,7 +415,15 @@ module.exports = {
     - 禁止使用 for-in 循环迭代数组。
 
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-for-in-array": "error"
+    }
+    ```
 
 #### no-inferrable-types
 - [官方地址](https://typescript-eslint.io/rules/no-inferrable-types)
@@ -423,8 +431,46 @@ module.exports = {
 - 描述
     - 不允许对初始化为数字、字符串或布尔值的变量或参数进行显式类型声明。
 
+        | ❌ | ✅ |
+        | --- | --- |
+        | const a: bigint = 10n; | const a = 10n; |
+        | const a: bigint = BigInt(10); | const a = BigInt(10); |
+        | const a: boolean = !0; | const a = !0; |
+        | const a: boolean = Boolean(null); | const a = Boolean(null); |
+        | const a: boolean = true; | const a = true; |
+        | const a: null = null; | const a = null; |
+        | const a: number = 10; | const a = 10; |
+        | const a: number = Infinity; | const a = Infinity; |
+        | const a: number = NaN; | const a = NaN; |
+        | const a: number = Number('1'); | const a = Number('1'); |
+        | const a: RegExp = /a/; | const a = /a/; |
+        | const a: RegExp = new RegExp('a'); | const a = new RegExp('a'); |
+        | const a: string = `str`; | const a = `str`; |
+        | const a: string = String(1); | const a = String(1); |
+        | const a: symbol = Symbol('a'); | const a = Symbol('a'); |
+        | const a: undefined = undefined; | const a = undefined; |
+        | const a: undefined = void someValue; | const a = void someValue;
+
 - 选项
+
+    ```typescript
+    interface Options {
+        ignoreParameters?: boolean;
+        ignoreProperties?: boolean;
+    }
+
+    const defaultOptions: Options = [
+        { ignoreParameters: false, ignoreProperties: false },
+    ];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-inferrable-types": "error"
+    }
+    ```
 
 #### no-non-null-assertion
 - [官方地址](https://typescript-eslint.io/rules/no-non-null-assertion)

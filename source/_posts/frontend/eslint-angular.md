@@ -191,15 +191,95 @@ module.exports = {
 
 - [官方地址](https://typescript-eslint.io/rules/ban-types)
 - 选项
+
+    ```typescript
+    interface Options {
+    types?: {
+        [k: string]:
+        | null
+        | boolean
+        | string
+        | {
+            message?: string;
+            fixWith?: string;
+            suggest?: string[];
+            };
+    };
+    extendDefaults?: boolean;
+    }
+
+    const defaultOptions: Options = [{}];
+    ```
+
 - 描述
+    - 使用小写类型以保持一致性
+    - 使用正确的函数类型
+    - 使用安全的object类型
+
+        | ❌ | ✅ |
+        | --- | --- |
+        | String | string |
+        | Boolean | boolean |
+        | Number | number |
+        | Symbol | symbol |
+        | BigInt | bigint |
+        | Function | () => {} |
+        | Object | object \| 特定类型 |
+        | {} | 特定类型 |
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/ban-types": "error"
+    }
+    // 或者
+    {
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+            "types": {
+                // 自定义消息描述为什么不能使用此类型
+                "Foo": "Don't use Foo because it is unsafe",
+
+                // 添加一个自定义消息，并告知插件如何修复这个问题
+                "OldAPI": {
+                "message": "Use NewAPI instead",
+                "fixWith": "NewAPI"
+                },
+
+                // 取消默认禁用的类型
+                "{}": false
+            },
+            "extendDefaults": true
+            }
+        ]
+    }
+    ```
 
 #### consistent-type-definitions
 
 - [官方地址](https://typescript-eslint.io/rules/consistent-type-definitions)
 - 选项
+
+    ```typescript
+    type Options = "interface" | "type";
+
+    const defaultOptions: Options = ["interface"];
+    ```
+
 - 描述
+    - 强制使用`interface`或者`type`来声明类型
+
 - 示例
+
+    ```json
+    {
+       "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+       // 或者
+       "@typescript-eslint/consistent-type-definitions": ["error", "type"]
+    }
+    ```
 
 ## 完整示例
 

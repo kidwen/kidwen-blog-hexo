@@ -281,6 +281,132 @@ module.exports = {
     }
     ```
 
+#### dot-notation
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### explicit-member-accessibility
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-empty-function
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-for-in-array
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-inferrable-types
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-non-null-assertion
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-require-imports
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-this-alias
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-unnecessary-type-assertion
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-var-requires
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### prefer-for-of
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### prefer-readonly
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### strict-boolean-expressions
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### await-thenable
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-unnecessary-boolean-literal-compare
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-unnecessary-qualifier
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-unnecessary-type-arguments
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### promise-function-async
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### restrict-plus-operands
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### unbound-method
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
+#### no-unused-vars
+- [官方地址]()
+- 选项
+- 描述
+- 示例
+
 ## 完整示例
 
 :::details Check what you want to copy to your config file

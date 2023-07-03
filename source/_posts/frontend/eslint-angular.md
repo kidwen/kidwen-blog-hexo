@@ -101,6 +101,10 @@ module.exports = {
 #### array-type
 
 - [官方地址](https://typescript-eslint.io/rules/array-type)
+
+- 描述
+    - 配置数组声明方式,`error`代表使用`T[]`
+
 - 类型
     - 'error'|Array
 - 选项
@@ -112,8 +116,6 @@ module.exports = {
     }
     ```
 
-- 描述
-    - 配置数组声明方式,`error`代表使用`T[]`
 - 示例
 
     ```json
@@ -130,6 +132,19 @@ module.exports = {
 #### ban-ts-comment
 
 - [官方地址](https://typescript-eslint.io/rules/ban-ts-comment)
+
+- 描述
+    - 禁止`@ts-<directive>`注释或要求指令后的描述
+    - 默认只允许`@ts-check`
+    - `allow-with-description`允许带描述的注释指令
+
+    ```typescript
+    // @ts-expect-error: description
+    ```
+
+    - `descriptionFormat`正则匹配指令注释后的描述,不匹配则报错
+    - `minimumDescriptionLength`指令注释后的描述最短长度
+
 - 选项
 
     ```typescript
@@ -159,17 +174,6 @@ module.exports = {
     ];
     ```
 
-- 描述
-    - 禁止`@ts-<directive>`注释或要求指令后的描述
-    - 默认只允许`@ts-check`
-    - `allow-with-description`允许带描述的注释指令
-
-    ```typescript
-    // @ts-expect-error: description
-    ```
-
-    - `descriptionFormat`正则匹配指令注释后的描述,不匹配则报错
-    - `minimumDescriptionLength`指令注释后的描述最短长度
 - 示例
 
     ```json
@@ -190,6 +194,23 @@ module.exports = {
 #### ban-types
 
 - [官方地址](https://typescript-eslint.io/rules/ban-types)
+
+- 描述
+    - 使用小写类型以保持一致性
+    - 使用正确的函数类型
+    - 使用安全的object类型
+
+        | ❌ | ✅ |
+        | --- | --- |
+        | String | string |
+        | Boolean | boolean |
+        | Number | number |
+        | Symbol | symbol |
+        | BigInt | bigint |
+        | Function | () => {} |
+        | Object | object \| 特定类型 |
+        | {} | 特定类型 |
+
 - 选项
 
     ```typescript
@@ -210,22 +231,6 @@ module.exports = {
 
     const defaultOptions: Options = [{}];
     ```
-
-- 描述
-    - 使用小写类型以保持一致性
-    - 使用正确的函数类型
-    - 使用安全的object类型
-
-        | ❌ | ✅ |
-        | --- | --- |
-        | String | string |
-        | Boolean | boolean |
-        | Number | number |
-        | Symbol | symbol |
-        | BigInt | bigint |
-        | Function | () => {} |
-        | Object | object \| 特定类型 |
-        | {} | 特定类型 |
 
 - 示例
 
@@ -260,6 +265,10 @@ module.exports = {
 #### consistent-type-definitions
 
 - [官方地址](https://typescript-eslint.io/rules/consistent-type-definitions)
+
+- 描述
+    - 强制使用`interface`或者`type`来声明类型
+
 - 选项
 
     ```typescript
@@ -267,9 +276,6 @@ module.exports = {
 
     const defaultOptions: Options = ["interface"];
     ```
-
-- 描述
-    - 强制使用`interface`或者`type`来声明类型
 
 - 示例
 
@@ -283,6 +289,14 @@ module.exports = {
 
 #### dot-notation
 - [官方地址](https://typescript-eslint.io/rules/dot-notation)
+
+- 描述
+    - 尽可能强制执行点表示法
+
+        | ❌ | ✅ |
+        | --- | --- |
+        | obj["property"] | obj.property |
+
 - 选项
 
     ```typescript
@@ -300,13 +314,6 @@ module.exports = {
     };
     ```
 
-- 描述
-    - 尽可能强制执行点表示法
-
-        | ❌ | ✅ |
-        | --- | --- |
-        | obj["property"] | obj.property |
-
 - 示例
 
     ```json
@@ -318,123 +325,217 @@ module.exports = {
     ```
 
 #### explicit-member-accessibility
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/explicit-member-accessibility)
+
 - 描述
+    - 需要对类属性和方法进行显式可访问性修饰符。`public`, `protected`, `private`
+
+- 选项
+
+    ```typescript
+    type AccessibilityLevel = "explicit" | "no-public" | "off";
+
+    interface Options {
+        accessibility?: AccessibilityLevel;
+        overrides?: {
+            accessors?: AccessibilityLevel;
+            constructors?: AccessibilityLevel;
+            methods?: AccessibilityLevel;
+            properties?: AccessibilityLevel;
+            parameterProperties?: AccessibilityLevel;
+        };
+        ignoredMethodNames?: string[];
+    }
+
+    const defaultOptions: Options = [{ accessibility: "explicit" }];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/explicit-member-accessibility": "error"
+    }
+    ```
 
 #### no-empty-function
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-empty-function)
+
 - 描述
+    - 不允许空方法
+
+- 选项
+
+    ```typescript
+
+    type AllowOptionEntries =
+        | 'functions'
+        | 'arrowFunctions'
+        | 'generatorFunctions'
+        | 'methods'
+        | 'generatorMethods'
+        | 'getters'
+        | 'setters'
+        | 'constructors'
+        | 'private-constructors'
+        | 'protected-constructors'
+        | 'asyncFunctions'
+        | 'asyncMethods'
+        | 'decoratedFunctions'
+        | 'overrideMethods';
+
+    interface Options extends BaseNoEmptyFunctionOptions {
+        allow?: Array<AllowOptionEntries>;
+    }
+    const defaultOptions: Options = {
+        ...baseNoEmptyFunctionDefaultOptions,
+        allow: [],
+    };
+    ```
+
 - 示例
 
+    ```json
+    {
+        // 必须禁用基础规则
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": [
+            "error",
+            {
+                "allow": ["decoratedFunctions"]
+            }
+        ]
+    }
+    ```
+
 #### no-for-in-array
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-for-in-array)
+
 - 描述
+    - 禁止使用 for-in 循环迭代数组。
+
+- 选项
 - 示例
 
 #### no-inferrable-types
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-inferrable-types)
+
 - 描述
+    - 不允许对初始化为数字、字符串或布尔值的变量或参数进行显式类型声明。
+
+- 选项
 - 示例
 
 #### no-non-null-assertion
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-non-null-assertion)
+
 - 描述
+- 选项
 - 示例
 
 #### no-require-imports
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-require-imports)
+
 - 描述
+- 选项
 - 示例
 
 #### no-this-alias
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-this-alias)
+
 - 描述
+- 选项
 - 示例
 
 #### no-unnecessary-type-assertion
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-unnecessary-type-assertion)
+
 - 描述
+- 选项
 - 示例
 
 #### no-var-requires
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-var-requires)
+
 - 描述
+- 选项
 - 示例
 
 #### prefer-for-of
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/prefer-for-of)
+
 - 描述
+- 选项
 - 示例
 
 #### prefer-readonly
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/prefer-readonly)
+
 - 描述
+- 选项
 - 示例
 
 #### strict-boolean-expressions
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/strict-boolean-expressions)
+
 - 描述
+- 选项
 - 示例
 
 #### await-thenable
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/await-thenable)
+
 - 描述
+- 选项
 - 示例
 
 #### no-unnecessary-boolean-literal-compare
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare)
+
 - 描述
+- 选项
 - 示例
 
 #### no-unnecessary-qualifier
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
+
 - 描述
+- 选项
 - 示例
 
 #### no-unnecessary-type-arguments
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-unnecessary-type-arguments)
+
 - 描述
+- 选项
 - 示例
 
 #### promise-function-async
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/promise-function-async)
+
 - 描述
+- 选项
 - 示例
 
 #### restrict-plus-operands
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/restrict-plus-operands)
+
 - 描述
+- 选项
 - 示例
 
 #### unbound-method
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/unbound-method)
+
 - 描述
+- 选项
 - 示例
 
 #### no-unused-vars
-- [官方地址]()
-- 选项
+- [官方地址](https://typescript-eslint.io/rules/no-unused-vars)
+
 - 描述
+- 选项
 - 示例
 
 ## 完整示例

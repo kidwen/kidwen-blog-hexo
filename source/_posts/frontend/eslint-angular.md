@@ -282,10 +282,40 @@ module.exports = {
     ```
 
 #### dot-notation
-- [官方地址]()
+- [官方地址](https://typescript-eslint.io/rules/dot-notation)
 - 选项
+
+    ```typescript
+    interface Options extends BaseDotNotationOptions {
+        allowPrivateClassPropertyAccess?: boolean;
+        allowProtectedClassPropertyAccess?: boolean;
+        allowIndexSignaturePropertyAccess?: boolean;
+    }
+
+    const defaultOptions: Options = {
+        ...baseDotNotationDefaultOptions,
+        allowPrivateClassPropertyAccess: false,
+        allowProtectedClassPropertyAccess: false,
+        allowIndexSignaturePropertyAccess: false,
+    };
+    ```
+
 - 描述
+    - 尽可能强制执行点表示法
+
+        | ❌ | ✅ |
+        | --- | --- |
+        | obj["property"] | obj.property |
+
 - 示例
+
+    ```json
+    {
+        // 必须禁用基础规则
+        "dot-notation": "off",
+        "@typescript-eslint/dot-notation": "error"
+    }
+    ```
 
 #### explicit-member-accessibility
 - [官方地址]()

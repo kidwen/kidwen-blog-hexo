@@ -476,113 +476,425 @@ module.exports = {
 - [官方地址](https://typescript-eslint.io/rules/no-non-null-assertion)
 
 - 描述
+    - 禁止使用 `!` 进行非空断言后缀运算符。
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-non-null-assertion": "error"
+    }
+    ```
 
 #### no-require-imports
 - [官方地址](https://typescript-eslint.io/rules/no-require-imports)
 
 - 描述
+    - 禁止调用 `require()`
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-require-imports": "error"
+    }
+    ```
 
 #### no-this-alias
 - [官方地址](https://typescript-eslint.io/rules/no-this-alias)
 
 - 描述
+    - 禁止使用 `this` 别名
+
 - 选项
+    ```typescript
+    interface Options {
+        /**
+        * 是否忽略解构, 例如 `const { props, state } = this`.
+        */
+        allowDestructuring?: boolean;
+        /**
+        * 忽略的名称, 例如 ["self"] for `const self = this;`.
+        */
+        allowedNames?: string[];
+    }
+
+    const defaultOptions: Options = [
+        { allowDestructuring: true, allowedNames: [] },
+    ];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-this-alias": "error"
+    }
+    ```
 
 #### no-unnecessary-type-assertion
 - [官方地址](https://typescript-eslint.io/rules/no-unnecessary-type-assertion)
 
 - 描述
+    - 禁止不更改表达式类型的类型断言。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        /**
+         * 忽略的类型名称列表。
+        */
+        typesToIgnore?: string[];
+    }
+
+    const defaultOptions: Options = [{}];
+    ```
+
 - 示例
+    ```json
+    {
+        "@typescript-eslint/no-unnecessary-type-assertion": ["error", { "typesToIgnore": ["Foo"] }]
+    }
+    ```
 
 #### no-var-requires
 - [官方地址](https://typescript-eslint.io/rules/no-var-requires)
 
 - 描述
+    - 不允许 `require` 语句（导入语句中除外）
+
+        | ❌ | ✅ |
+        | --- | --- |
+        | var foo = require('foo'); | import foo = require('foo'); |
+        | const foo = require('foo'); | require('foo'); |
+        | let foo = require('foo'); | import foo from 'foo'; |
+
 - 选项
+    - none
+
 - 示例
+
+    ```typescript
+    {
+        "@typescript-eslint/no-var-requires": "error"
+    }
+    ```
 
 #### prefer-for-of
 - [官方地址](https://typescript-eslint.io/rules/prefer-for-of)
 
 - 描述
+    - 尽可能强制使用 for-of 循​​环而不是标准 for 循环。
+
 - 选项
+    - none
+
 - 示例
+    ```json
+    {
+        "@typescript-eslint/prefer-for-of": "error"
+    }
+    ```
 
 #### prefer-readonly
 - [官方地址](https://typescript-eslint.io/rules/prefer-readonly)
 
 - 描述
+    - 如果私有成员从未在构造函数外部修改过，则要求将其标记为只读
+
 - 选项
+
+    ```typescript
+    interface Options {
+        // 用于限制仅检查立即分配 `lambda` 值的成员。
+        onlyInlineLambdas?: boolean;
+    }
+
+    const defaultOptions: Options = [{ onlyInlineLambdas: false }];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/prefer-readonly": ["error", { "onlyInlineLambdas": true }]
+    }
+    ```
 
 #### strict-boolean-expressions
 - [官方地址](https://typescript-eslint.io/rules/strict-boolean-expressions)
 
 - 描述
+    - 禁止布尔表达式中的某些类型。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        allowString?: boolean;
+        allowNumber?: boolean;
+        allowNullableObject?: boolean;
+        allowNullableBoolean?: boolean;
+        allowNullableString?: boolean;
+        allowNullableNumber?: boolean;
+        allowNullableEnum?: boolean;
+        allowAny?: boolean;
+        allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean;
+    }
+
+    const defaultOptions: Options = [
+        {
+            allowString: true,
+            allowNumber: true,
+            allowNullableObject: true,
+            allowNullableBoolean: false,
+            allowNullableString: false,
+            allowNullableNumber: false,
+            allowNullableEnum: true,
+            allowAny: false,
+            allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+        },
+    ];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/strict-boolean-expressions": "error"
+    }
+    ```
 
 #### await-thenable
 - [官方地址](https://typescript-eslint.io/rules/await-thenable)
 
 - 描述
+    - 禁止 `await` 不是 `Thenable` 的值。
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/await-thenable": "error"
+    }
+    ```
 
 #### no-unnecessary-boolean-literal-compare
 - [官方地址](https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare)
 
 - 描述
+    - 禁止与布尔文字进行不必要的相等比较。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        /**
+        * 是否允许可空布尔变量和“true”之间的比较。
+        */
+        allowComparingNullableBooleansToTrue?: boolean;
+        /**
+        * 是否允许可为 null 的布尔变量和“false”之间进行比较。
+        */
+        allowComparingNullableBooleansToFalse?: boolean;
+    }
+
+    const defaultOptions: Options = [
+        {
+            allowComparingNullableBooleansToTrue: true,
+            allowComparingNullableBooleansToFalse: true,
+        },
+    ];
+    ```
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error"
+    }
+    ```
 
 #### no-unnecessary-qualifier
 - [官方地址](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
 - 描述
+    - 禁止不必要的命名空间限定符。
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unnecessary-qualifier": "error"
+    }
+    ```
 
 #### no-unnecessary-type-arguments
 - [官方地址](https://typescript-eslint.io/rules/no-unnecessary-type-arguments)
 
 - 描述
+    - 不允许类型参数等于默认值。
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unnecessary-type-arguments": "error"
+    }
+    ```
 
 #### promise-function-async
 - [官方地址](https://typescript-eslint.io/rules/promise-function-async)
 
 - 描述
+    - 要求任何返回 Promise 的函数或方法被标记为异步。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        /**
+        * 是否将“any”和“unknown”视为 Promise。
+        */
+        allowAny?: boolean;
+        /**
+        * 任何额外的类或接口名称都被视为 Promise。
+        */
+        allowedPromiseNames?: string[];
+        checkArrowFunctions?: boolean;
+        checkFunctionDeclarations?: boolean;
+        checkFunctionExpressions?: boolean;
+        checkMethodDeclarations?: boolean;
+    }
+
+    const defaultOptions: Options = [
+        {
+            allowAny: true,
+            allowedPromiseNames: [],
+            checkArrowFunctions: true,
+            checkFunctionDeclarations: true,
+            checkFunctionExpressions: true,
+            checkMethodDeclarations: true,
+        },
+    ];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/promise-function-async": "error"
+    }
+    ```
 
 #### restrict-plus-operands
 - [官方地址](https://typescript-eslint.io/rules/restrict-plus-operands)
 
 - 描述
+    - 要求加法的两个操作数类型相同，并且为 `bigint` `number` 或 `string`。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        /**
+        * 是否允许`any`类型值。
+
+        */
+        allowAny?: boolean;
+        /**
+        * 是否允许`boolean`类型值。
+        */
+        allowBoolean?: boolean;
+        /**
+        * 是否允许 `null` 或者 `undefined` 类型值.
+        */
+        allowNullish?: boolean;
+        /**
+        * 是否允许 `bigint`/`number` 类型值和 `string` 类型值相加。
+        */
+        allowNumberAndString?: boolean;
+        /**
+        * 是否允许 `regexp` 类型值。
+        */
+        allowRegExp?: boolean;
+        /**
+        * 是否检查复合赋值，例如`+=`。
+        */
+        checkCompoundAssignments?: boolean;
+    }
+
+    const defaultOptions: Options = [{ checkCompoundAssignments: false }];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/restrict-plus-operands": "error"
+    }
+    ```
 
 #### unbound-method
 - [官方地址](https://typescript-eslint.io/rules/unbound-method)
 
 - 描述
+    - 强制以预期范围调用未绑定方法。
+
 - 选项
+
+    ```typescript
+    interface Options {
+        /**
+        * 是否跳过检查“静态”方法是否正确绑定。
+        */
+        ignoreStatic?: boolean;
+    }
+
+    const defaultOptions: Options = [{ ignoreStatic: false }];
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@typescript-eslint/unbound-method": "error"
+    }
+    ```
 
 #### no-unused-vars
 - [官方地址](https://typescript-eslint.io/rules/no-unused-vars)
 
 - 描述
+    - 禁止使用未使用的变量。
+
 - 选项
+    - none
+
 - 示例
+
+    ```json
+    {
+        // 必须禁用基础规则
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error"
+    }
+    ```
 
 ## 完整示例
 

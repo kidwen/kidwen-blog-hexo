@@ -928,6 +928,91 @@ module.exports = {
     }
     ```
 
+#### no-unsafe-argument
+- [官方地址](https://typescript-eslint.io/rules/no-unsafe-argument)
+
+- 描述
+    - 禁止使用`any`类型的值调用函数。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unsafe-argument": "error"
+    }
+    ```
+
+#### no-unsafe-assignment
+- [官方地址](https://typescript-eslint.io/rules/no-unsafe-assignment)
+
+- 描述
+    - 禁止将任何类型的值分配给变量和属性。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unsafe-assignment": "error"
+    }
+    ```
+
+#### no-unsafe-call
+- [官方地址](https://typescript-eslint.io/rules/no-unsafe-call)
+
+- 描述
+    - 禁止调用`any`类型的值。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unsafe-call": "error"
+    }
+    ```
+
+#### no-unsafe-member-access
+- [官方地址](https://typescript-eslint.io/rules/no-unsafe-member-access)
+
+- 描述
+    - 禁止成员访问`any`类型的值。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unsafe-member-access": "error"
+    }
+    ```
+
+#### no-unsafe-return
+- [官方地址](https://typescript-eslint.io/rules/no-unsafe-return)
+
+- 描述
+    - 禁止从函数返回`any`类型的值。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-unsafe-return": "error"
+    }
+    ```
+
 ## 完整示例
 
 :::details Check what you want to copy to your config file

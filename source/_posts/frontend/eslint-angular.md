@@ -896,6 +896,38 @@ module.exports = {
     }
     ```
 
+#### no-explicit-any
+- [官方地址](https://typescript-eslint.io/rules/no-explicit-any)
+
+- 描述
+    - 禁用 `any` 类型
+
+- 选项
+    ```typescript
+    interface Options {
+        /**
+        * 是否启用自动修复，将`any`类型转换为`unknown`类型。
+        */
+        fixToUnknown?: boolean;
+        /**
+        * 是否忽略其余参数数组。
+        */
+        ignoreRestArgs?: boolean;
+    }
+
+    const defaultOptions: Options = [
+        { fixToUnknown: false, ignoreRestArgs: false },
+    ];
+    ```
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-explicit-any": "error"
+    }
+    ```
+
 ## 完整示例
 
 :::details Check what you want to copy to your config file

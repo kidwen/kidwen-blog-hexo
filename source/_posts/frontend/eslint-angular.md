@@ -1013,6 +1013,23 @@ module.exports = {
     }
     ```
 
+#### no-useless-empty-export
+- [官方地址](https://typescript-eslint.io/rules/no-useless-empty-export)
+
+- 描述
+    - 禁止不更改模块文件中任何内容的空导出。
+
+- 选项
+    - none
+
+- 示例
+
+    ```json
+    {
+        "@typescript-eslint/no-useless-empty-export": "error"
+    }
+    ```
+
 ## 完整示例
 
 :::details Check what you want to copy to your config file

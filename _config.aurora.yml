@@ -102,10 +102,10 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: false
-  clientID: '64d9255b573120602cb8'
-  clientSecret: 'f9f5bbcc22aa1646e36b4383313c8d4893f40e09'
+  clientID: ''
+  clientSecret: ''
   repo: 'kidwen.github.io'
   owner: 'kidwen'
   admin: ['kidwen']
@@ -118,18 +118,18 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  # app_id:
-  # app_key:
-  # avatar: ''
-  # placeholder: Leave your thoughts behind~
-  # visitor: true
-  # lang: en
-  # avatarForce: false
-  # meta: ['nick', 'mail']
-  # requiredFields: []
-  # admin: 'TriDiamond'
-  # recentComment: true
+  enable: true
+  app_id: 'RDK9H1zUfJUuO9CD7CZnXpXs-gzGzoHsz'
+  app_key: 'PB3OV5vigsTXgkKqvbeKGbJa'
+  avatar: ''
+  placeholder: Leave your thoughts behind~
+  visitor: true
+  lang: en
+  avatarForce: false
+  meta: ['nick', 'mail']
+  requiredFields: []
+  admin: 'kidwen'
+  recentComment: true
 
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/

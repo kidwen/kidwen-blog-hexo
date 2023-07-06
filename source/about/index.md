@@ -1,7 +1,17 @@
 ---
 title: About
 date: 2023-03-19 17:04:18
+type: about
 tags: 
   - me
 ---
-Hi! It\`s me, a web developer.
+
+<section class="about-content">
+    Hi! It`s me, a web developer.
+</section>
+
+<style>
+    .about-content {
+        color: red;
+    }
+</style>

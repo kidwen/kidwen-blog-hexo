@@ -9,7 +9,7 @@ tags:
 <div class="content">
     <section class="about-content">
         <div class="tip">$</div>
-        <div class="info">Hi! It`s me, a web developer.</div>
+        <div class="info">Hi! It's me, a web developer.</div>
     </section>
 </div>
 <style>
@@ -36,7 +36,6 @@ tags:
         height: 30px;
         background: #333;
         width: 100%;
-        box-shadow: 0 5px 10px -5px #000;
         border-radius: 4px 4px 0 0;
     }
     .content::after {

@@ -134,7 +134,7 @@ valine:
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
-  enable: false
+  enable: true
 
 copy_protection:
   enable: false

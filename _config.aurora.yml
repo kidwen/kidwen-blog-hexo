@@ -90,9 +90,9 @@ socials:
 #! ---------------------------------------------------------------
 site_meta:
   cdn: cn
-  favicon:
-  description: ''
-  keywords: 'Frontend, Web development'
+  favicon: 'favicon.ico'
+  description: 'Record and share front-end knowledge'
+  keywords: 'Frontend, Web development, angular'
   author: 'kdiwen'
 
 #! ---------------------------------------------------------------

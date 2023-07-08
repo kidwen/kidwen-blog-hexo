@@ -12,13 +12,21 @@ tags:
         <div class="info">Hi! It's me, a web developer.</div>
     </section>
     <section class="person">
-            <div class="header"></div>
-            <div class="arm left"></div>
-            <div class="body"></div>
-            <div class="arm right"></div>
-            <div class="leg left"></div>
-            <div class="leg right"></div>
-        </section>
+        <div class="header"></div>
+        <div class="arm left"></div>
+        <div class="body"></div>
+        <div class="arm right"></div>
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+    </section>
+    <section class="person person2">
+        <div class="header"></div>
+        <div class="arm left left2"></div>
+        <div class="body bordy2"></div>
+        <div class="arm right right2"></div>
+        <div class="leg left left2"></div>
+        <div class="leg right right2"></div>
+    </section>
 </div>
 <style>
     .post-html {
@@ -70,9 +78,14 @@ tags:
     .person {
         position: absolute;
         height: 67px;
-        left: 30px;
+        left: 90px;
         bottom: 0;
         animation: 1s ease-in-out 0s infinite alternate jumpTop;
+    }
+    .person2 {
+        transform: rotate(3deg);
+        left: 20px;
+        animation: none;
     }
     .header {
         width: 20px;
@@ -89,14 +102,37 @@ tags:
         position: absolute;
         transform: rotate(45deg);
     }
+    .left2 {
+        transform: rotate(0);
+        background-color: #555;
+    }
     .right {
         left: 20px;
         position: absolute;
         transform: rotate(-45deg);
     }
+    .right2 {
+        transform: rotate(-15deg);
+        background-color: #333;
+    }
     .body {
         position: absolute;
         left: 10px;
+    }
+    .bordy2 {
+        background-color: #333;
+    }
+    .arm.left2 {
+        transform-origin: top right;
+        left: 10px;
+        top: 25px;
+        animation: 1s ease-in-out 1s infinite alternate toRightArm;
+    }
+    .arm.right2 {
+        transform-origin: top right;
+        left: 10px;
+        top: 25px;
+        animation: 1s ease-in-out 0s infinite alternate toLeftArm;
     }
     .leg.left {
         top: 42px;
@@ -105,12 +141,18 @@ tags:
         transform: rotate(15deg);
         animation: 1s ease-in-out 0s infinite alternate jump;
     }
+    .leg.left2 {
+        animation: 1s ease-in-out 0s infinite alternate toRight;
+    }
     .leg.right {
         top: 42px;
         left: 10px;
         transform-origin: top left;
         transform: rotate(-15deg);
         animation: 1s ease-in-out 0s infinite alternate jumpRight;
+    }
+    .leg.right2 {
+        animation: 1s ease-in-out 0s infinite alternate toLeft;
     }
     @keyframes typing {
         from { width: 0; }
@@ -143,6 +185,38 @@ tags:
     @media only screen and (max-width: 720px) {
         .content {
             height: 30vh;
+        }
+    }
+    @keyframes toRight {
+        from {
+            transform: rotate(15deg);
+        }
+        to {
+            transform: rotate(-15deg);
+        }
+    }
+    @keyframes toLeft {
+        from {
+            transform: rotate(-15deg);
+        }
+        to {
+            transform: rotate(15deg);
+        }
+    }
+    @keyframes toRightArm {
+        from {
+            transform: rotate(15deg);
+        }
+        to {
+            transform: rotate(-35deg);
+        }
+    }
+    @keyframes toLeftArm {
+        from {
+            transform: rotate(15deg);
+        }
+        to {
+            transform: rotate(-35deg);
         }
     }
 </style>

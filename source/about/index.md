@@ -35,6 +35,7 @@ tags:
     .content {
         background-color: #000;
         height: 20vh;
+        min-height: 200px;
         border-radius: 4px;
         padding: 40px 20px 20px 20px;
         position: relative;

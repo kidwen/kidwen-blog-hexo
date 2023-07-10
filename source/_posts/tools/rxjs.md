@@ -25,3 +25,49 @@ RxJS 提供了许多操作符，可以对 Observable 进行各种转换和过滤
 - Operators:    是纯函数，支持使用函数式编程风格处理集合，例如map、filter、concat、reduce 等操作。
 - Subject:      相当于EventEmitter，也是将值或事件多播到多个观察者的唯一方法。
 - Schedulers:   是控制并发的集中调度程序，允许我们在计算发生时进行协调，例如setTimeout 或 requestAnimationFrame 或其他。
+
+### Observable
+
+    ```javascript
+    import { Observable } from 'rxjs';
+
+    const observable = new Observable((subscriber) => {
+        subscriber.next(1);
+        subscriber.next(2);
+        setTimeout(() => {
+            subscriber.next(3);
+            subscriber.complete();
+        }, 1000);
+    });
+
+    console.log('订阅开始');
+    observable.subscribe({
+        next(x) {
+            console.log('got value ' + x);
+        },
+        error(err) {
+            console.error('something wrong occurred: ' + err);
+        },
+        complete() {
+            console.log('done');
+        },
+    });
+    console.log('订阅结束');
+
+    // 订阅开始
+    // 1
+    // 2
+    // 订阅结束
+    // got value 3
+    // done
+    ```
+
+### Observer
+
+### Subscription
+
+### Subject
+
+### Schedulers
+
+### Operators

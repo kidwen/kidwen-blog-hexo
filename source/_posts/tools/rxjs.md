@@ -1,6 +1,5 @@
 ---
 title: rxjs
-tag: server
 date: 2023-07-10 10:30:00
 cover: /images/rxjs.png
 tags:

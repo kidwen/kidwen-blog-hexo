@@ -28,6 +28,9 @@ RxJS 提供了许多操作符，可以对 Observable 进行各种转换和过滤
 
 ### Observable
 
+    > `Pull systems` 消费者决定什么时候从数据生产者哪里获取数据，而生成者不知道什么时候将数据送给消费者。每一个js方法都是一个`Pull system`，包括 `generator 函数`。
+    > `Push systems` 生产者确定什么时候向消费者发送数据，而消费者不知道什么时候会收到这些数据。`Promises` 是`Pull systems`中最通用的类型。
+
     ```javascript
     import { Observable } from 'rxjs';
 

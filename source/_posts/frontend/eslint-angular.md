@@ -1032,22 +1032,43 @@ module.exports = {
 ### @angular-eslint/eslint-plugin
 
 #### no-empty-lifecycle-method
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-empty-lifecycle-method.md)
 
 - 描述
+    - 禁止声明空生命周期方法
 
 - 选项
+    - none
 
 - 示例
+    ```json
+    {
+        "@angular-eslint/no-empty-lifecycle-method": ["error"]
+    }
+    ```
 
 #### sort-ngmodule-metadata-arrays
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/sort-ngmodule-metadata-arrays.md)
 
 - 描述
+    - 强制`NgModule`元数据按`ASC`字母顺序排序。
 
 - 选项
 
+    ```typescript
+    interface Options {
+        // `BCP` 47 种语言标签。默认值：`en-US`。
+        locale?: string;
+    }
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/sort-ngmodule-metadata-arrays": ["error"]
+    }
+    ```
 
 #### component-class-suffix
 - [官方地址]()

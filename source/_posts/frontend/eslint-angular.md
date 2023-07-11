@@ -1,6 +1,6 @@
 ---
 title: eslint-angular
-tags: 
+tags:
   - eslint
   - angular
   - typescript
@@ -180,7 +180,7 @@ module.exports = {
     {
         "@typescript-eslint/ban-ts-comment": [
             "error",
-            { 
+            {
                 "ts-expect-error": "allow-with-description",
                 "ts-ignore": true,
                 "ts-nocheck": true,
@@ -1029,6 +1029,394 @@ module.exports = {
         "@typescript-eslint/no-useless-empty-export": "error"
     }
     ```
+### @angular-eslint/eslint-plugin
+
+#### no-empty-lifecycle-method
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### sort-ngmodule-metadata-arrays
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### component-class-suffix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### directive-class-suffix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### component-selector
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### use-injectable-provided-in
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### contextual-decorator
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### component-selector
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### use-injectable-provided-in
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### contextual-decorator
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### directive-selector
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-attribute-decorator
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-output-on-prefix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-pipe-impure
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-queries-metadata-property
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-lifecycle-call
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### component-max-inline-declarations
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-forward-ref
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-input-prefix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### pipe-prefix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### no-output-native
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### prefer-output-readonly
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### relative-url-prefix
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### use-component-selector
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### use-component-view-encapsulation
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### contextual-lifecycle
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### prefer-on-push-component-change-detection
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/banana-in-box
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/accessibility-alt-text
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/accessibility-elements-content
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/accessibility-label-has-associated-control
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/accessibility-table-scope
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/accessibility-valid-aria
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/click-events-have-key-events
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/cyclomatic-complexity
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/mouse-events-have-key-events
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/no-any
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/no-autofocus
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/no-distracting-elements
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/no-positive-tabindex
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/use-track-by-function
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/i18n
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
+
+#### template/attributes-order
+- [官方地址]()
+
+- 描述
+
+- 选项
+
+- 示例
 
 ## 完整示例
 

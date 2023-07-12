@@ -1141,7 +1141,7 @@ module.exports = {
     ```json
     {
         "@angular-eslint/component-selector": [
-        "error",
+            "error",
             {
                 "type": "element",
                 "prefix": "sg",
@@ -1217,7 +1217,7 @@ module.exports = {
     ```json
     {
         "@angular-eslint/directive-selector": [
-        "error",
+            "error",
             {
                 "type": "element",
                 "prefix": "app",

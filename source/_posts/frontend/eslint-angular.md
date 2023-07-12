@@ -281,7 +281,7 @@ module.exports = {
 
     ```json
     {
-       "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+       "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
        // 或者
        "@typescript-eslint/consistent-type-definitions": ["error", "type"]
     }
@@ -1071,85 +1071,161 @@ module.exports = {
     ```
 
 #### component-class-suffix
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-class-suffix.md)
 
 - 描述
+    - `@Component` 修饰的 `class` 必须以 `Component`(或自定义) 结尾。
 
 - 选项
 
+    ```typescript
+    interface Options {
+        /**
+         * 默认值: `["Component"]`
+        */
+        suffixes?: string[];
+    }
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/component-class-suffix": ["error"]
+    }
+    ```
 
 #### directive-class-suffix
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-class-suffix.md)
 
 - 描述
+    - `@Directive` 修饰的 `class` 必须以 `Directive`(或自定义) 结尾。
 
 - 选项
 
+     ```typescript
+    interface Options {
+        /**
+         * 默认值: `["Component"]`
+        */
+        suffixes?: string[];
+    }
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/directive-class-suffix": ["error"]
+    }
+    ```
 
 #### component-selector
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-selector.md)
 
 - 描述
+    - 组件选择器必须遵循指定的命名规则。
 
 - 选项
 
+    ```typescript
+    interface Options {
+        type?: string | ("element" | "attribute")[];
+        prefix?: string | unknown[];
+        style?: "camelCase" | "kebab-case";
+    }
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/component-selector": [
+        "error",
+            {
+                "type": "element",
+                "prefix": "sg",
+                "style": "kebab-case"
+            }
+        ]
+    }
+    ```
 
 #### use-injectable-provided-in
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/use-injectable-provided-in.md)
 
 - 描述
+    - 使用 `providedIn` 使 `Injectables` 可以 `tree-shakable`。
 
 - 选项
 
+    ```typescript
+    interface Options {
+        // 忽略的class名的正则表达式
+        ignoreClassNamePattern?: string;
+    }
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/use-injectable-provided-in": [
+            "error",
+            {
+                "ignoreClassNamePattern": "/Effects$/"
+            }
+        ]
+    }
+    ```
 
 #### contextual-decorator
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/contextual-decorator.md)
 
 - 描述
+    - 确保类在其主体中正确使用上下文装饰器。
 
 - 选项
 
 - 示例
 
-#### component-selector
-- [官方地址]()
-
-- 描述
-
-- 选项
-
-- 示例
-
-#### use-injectable-provided-in
-- [官方地址]()
-
-- 描述
-
-- 选项
-
-- 示例
-
-#### contextual-decorator
-- [官方地址]()
-
-- 描述
-
-- 选项
-
-- 示例
+    ```json
+    {
+        "@angular-eslint/contextual-decorator": ["error"]
+    }
+    ```
 
 #### directive-selector
-- [官方地址]()
+- [官方地址](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-selector.md)
 
 - 描述
+    - 指令选择器命名必须遵循指定的规则
 
 - 选项
 
+    ```typescript
+    interface Options {
+        type?: string | ("element" | "attribute")[];
+        prefix?: string | unknown[];
+        style?: "camelCase" | "kebab-case";
+    }
+
+    ```
+
 - 示例
+
+    ```json
+    {
+        "@angular-eslint/directive-selector": [
+        "error",
+            {
+                "type": "element",
+                "prefix": "app",
+                "style": "kebab-case"
+            }
+        ]
+    }
+    ```
 
 #### no-attribute-decorator
 - [官方地址]()
